@@ -4,7 +4,7 @@ const app = express()
 
 
 app.use(cors())
-
+const port = 3001
 app.get('/', (req, res) => {
     const data = [
         {
@@ -19,6 +19,6 @@ app.get('/', (req, res) => {
     res.send(data)
 })
 
-app.listen(3001, () => {
-    console.log('listening')
+app.listen(port, () => {
+    console.log('listening', port)
 })
